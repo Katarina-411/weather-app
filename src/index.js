@@ -12,6 +12,8 @@ function showSearch(response) {
   todayMax.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
   let todayMin = document.querySelector(".today-min");
   todayMin.innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
+  let h2 = document.querySelector("h2");
+  h2.innerHTML = response.data.sys.country;
 }
 function locationSearch(event) {
   event.preventDefault();
