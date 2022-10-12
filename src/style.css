@@ -27,13 +27,16 @@ a {
   text-decoration: none;
   color: #000;
 }
-
 footer {
   color: #d1dcdd;
   font-size: 13px;
   font-weight: normal;
   text-align: center;
   padding-top: 20px;
+}
+footer a {
+  color: #2b7c81;
+  font-weight: 700;
 }
 hr {
   color: #d1dcdd;
