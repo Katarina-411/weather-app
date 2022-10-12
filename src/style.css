@@ -1,0 +1,131 @@
+body {
+  font-family: "Urbanist", sans-serif;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+h6 {
+  font-size: 14px;
+  text-align: center;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer {
+  color: #d1dcdd;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 20px;
+}
+hr {
+  color: #d1dcdd;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 50px;
+  background-image: url(https://wallpaperaccess.com/full/655132.jpg);
+  border-radius: 20px;
+}
+.card-main {
+  padding: 5px;
+  background: none;
+}
+.card {
+  padding: 5px;
+  background: #f1f1f193;
+  border: none;
+  border-radius: 15px;
+}
+
+.btn-secondary {
+  background-color: #2b7c81;
+}
+.weather-today {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #f1f1f193;
+  border-radius: 15px;
+  max-width: 75%;
+  margin-left: 0;
+  padding: 10px 5px;
+}
+
+.date-today {
+  font-size: 22px;
+}
+
+.time-current {
+  font-size: 22px;
+}
+.condition-today {
+  font-size: 20px;
+  text-align: left;
+  position: static;
+}
+.condition-today-icon {
+  font-size: 100px;
+  text-align: left;
+  position: static;
+}
+.current-temp {
+  font-size: 80px;
+  font-weight: 800;
+  text-align: center;
+}
+.degrees {
+  font-size: 24px;
+  position: relative;
+  top: -40px;
+  left: -3px;
+}
+.today-max {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  position: static;
+}
+.today-min,
+.rainfall,
+.wind,
+.time {
+  font-size: 20px;
+  text-align: center;
+}
+.pipe {
+  color: #2b7c81;
+  font-size: 22px;
+}
+.pipe-small {
+  color: #2b7c81;
+  font-size: 16px;
+}
+.pipe-group,
+.temp-group {
+  position: static;
+  text-align: center;
+}
+.temp-max {
+  font-size: 14px;
+  font-weight: 600;
+}
+.temp-min {
+  font-size: 14px;
+}
