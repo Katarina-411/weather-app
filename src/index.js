@@ -20,6 +20,23 @@ function showSearch(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   conditionIcon.setAttribute("alt", response.data.weather[0].main);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = Math.round(response.data.main.humidity);
+  let windSpeed = document.querySelector("#wind-speed");
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  let windDirection = document.querySelector("#wind-direction");
+  windDirection.innerHTML = direction();
+  function direction() {
+    let directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+    let deg = response.data.wind.deg;
+    if (deg < 0) {
+      deg = 360 - (Math.abs(deg) % 360);
+    } else {
+      deg = deg % 360;
+    }
+    let w = parseInt(deg / 45);
+    return `${directions[w]}`;
+  }
 }
 function locationSearch(event) {
   event.preventDefault();
@@ -54,7 +71,25 @@ function showGeoSearch(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   conditionIcon.setAttribute("alt", response.data.weather[0].main);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = Math.round(response.data.main.humidity);
+  let windSpeed = document.querySelector("#wind-speed");
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  let windDirection = document.querySelector("#wind-direction");
+  windDirection.innerHTML = direction();
+  function direction() {
+    let directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+    let deg = response.data.wind.deg;
+    if (deg < 0) {
+      deg = 360 - (Math.abs(deg) % 360);
+    } else {
+      deg = deg % 360;
+    }
+    let w = parseInt(deg / 45);
+    return `${directions[w]}`;
+  }
 }
+
 function geoLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -101,12 +136,10 @@ let hour = now.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
 }
-
 let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-
 function formatDate() {
   return `${day}, ${date}  ${month}`;
 }

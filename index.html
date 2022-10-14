@@ -112,11 +112,10 @@
         <div class="col-4">
           <div class="card">
             <div class="card-body">
-              <h5>Precipitation</h5>
+              <h5>Humidity</h5>
               <div class="pipe-group">
-                <span class="rainfall">20mm</span>
-                <span class="pipe">|</span> 
-                <span class="rainfall">10%</span>
+               <span class="humidity" id="humidity">0</span>
+               <span class="humidity">%</span>
               </div>
             </div>
           </div>
@@ -126,7 +125,7 @@
           <div class="card">
             <div class="card-body">
               <h5>Sunrise</h5>
-              <p class="time">6:30am</p>
+              <p class="time" id="sunrise">am</p>
             </div>
           </div>
         </div>
@@ -135,7 +134,7 @@
           <div class="card">
             <div class="card-body">
               <h5>High Tide</h5>
-              <p class="time">8:30am</p>
+              <p class="time" id="high-tide">am</p>
             </div>
           </div>
         </div>
@@ -148,9 +147,10 @@
             <div class="card-body">
               <h5>Wind</h5>
               <div class="pipe-group">
-                <span class="wind">NE</span>
+                <span class="wind" id="wind-direction"></span>
                 <span class="pipe">|</span> 
-                <span class="wind">10km/h</span>
+                <span class="wind" id="wind-speed">0</span>
+                <span class="wind"> km/h</span>
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@
           <div class="card">
             <div class="card-body">
               <h5>Sunset</h5>
-              <p class="time">6:30pm</p>
+              <p class="time" id="sunset">pm</p>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@
           <div class="card">
             <div class="card-body">
               <h5>Low Tide</h5>
-              <p class="time">2:30pm</p>
+              <p class="time" id="low-tide">pm</p>
             </div>
           </div>
         </div>
