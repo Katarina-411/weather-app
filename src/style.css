@@ -81,12 +81,6 @@ hr {
   font-size: 22px;
   text-align: center;
 }
-.condition-today-icon {
-  font-size: 100px;
-  text-align: center;
-  position: relative;
-  left: -15px;
-}
 .current-temp {
   font-size: 80px;
   font-weight: 800;

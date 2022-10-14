@@ -14,6 +14,12 @@ function showSearch(response) {
   todayMin.innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
   let h2 = document.querySelector("h2");
   h2.innerHTML = response.data.sys.country;
+  let conditionIcon = document.querySelector("#condition-icon");
+  conditionIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  conditionIcon.setAttribute("alt", response.data.weather[0].main);
 }
 function locationSearch(event) {
   event.preventDefault();
@@ -42,6 +48,12 @@ function showGeoSearch(response) {
   todayMin.innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
   let h2 = document.querySelector("h2");
   h2.innerHTML = response.data.sys.country;
+  let conditionIcon = document.querySelector("#condition-icon");
+  conditionIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  conditionIcon.setAttribute("alt", response.data.weather[0].main);
 }
 function geoLocation(position) {
   let lat = position.coords.latitude;
@@ -87,18 +99,22 @@ let date = now.getDate();
 let year = now.getFullYear();
 let hour = now.getHours();
 if (hour < 10) {
-  hour = "0" + hour;
+  hour = `0${hour}`;
 }
+
 let minutes = now.getMinutes();
 if (minutes < 10) {
-  minutes = "0" + minutes;
+  minutes = `0${minutes}`;
 }
 
 function formatDate() {
   return `${day}, ${date}  ${month}`;
 }
 function formatTime() {
-  return `${hour}:${minutes}`;
+  if (hour >= 13) {
+    hourClock = `${hour - 12}`;
+    return `${hourClock}:${minutes} pm`;
+  } else return `${hour}:${minutes} am`;
 }
 let dateToday = document.querySelector("#date-today");
 dateToday.innerHTML = formatDate();
