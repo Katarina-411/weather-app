@@ -8,6 +8,8 @@ function showSearch(response) {
   currentTemp.innerHTML = `${temperature}`;
   let conditionToday = document.querySelector("#condition-today");
   conditionToday.innerHTML = response.data.weather[0].main;
+  let feelsLike = document.querySelector("#feels-like");
+  feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)}°C`;
   let todayMax = document.querySelector(".today-max");
   todayMax.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
   let todayMin = document.querySelector(".today-min");
@@ -65,6 +67,8 @@ function showGeoSearch(response) {
   currentTemp.innerHTML = `${temperature}`;
   let conditionToday = document.querySelector("#condition-today");
   conditionToday.innerHTML = response.data.weather[0].main;
+  let feelsLike = document.querySelector("#feels-like");
+  feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)}°C`;
   let todayMax = document.querySelector(".today-max");
   todayMax.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
   let todayMin = document.querySelector(".today-min");

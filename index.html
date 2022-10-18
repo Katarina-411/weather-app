@@ -9,11 +9,14 @@
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
-    />   
+    />
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -29,10 +32,16 @@
               type="search"
               placeholder="Search a location"
               aria-label="Search"
-              id = "search-location-input"
+              id="search-location-input"
               autocomplete="off"
             />
-            <button class="btn btn-outline-secondary" type="submit" id="search-button">🔍</button>
+            <button
+              class="btn btn-outline-secondary"
+              type="submit"
+              id="search-button"
+            >
+              🔍
+            </button>
           </form>
         </div>
         <div class="col">
@@ -58,11 +67,7 @@
         <div class="col-2">
           <div class="card-main">
             <div class="card-body">
-              <img 
-              src="" 
-              alt=""
-              id="condition-icon"
-              /> 
+              <img src="" alt="" id="condition-icon" />
             </div>
           </div>
         </div>
@@ -72,7 +77,7 @@
             <div class="card-body temp-group">
               <span class="current-temp" id="current-temp">0</span>
               <span class="degrees">
-                <a href="#" id="celsius-link">°C </a> |  
+                <a href="#" id="celsius-link">°C </a> |
                 <a href="#" id="farenheit-link">°F </a>
               </span>
             </div>
@@ -83,7 +88,7 @@
           <div class="col-6">
             <div class="card-main">
               <div class="card-body">
-               <p class="time-current" id="time-current">hh:mm</p>
+                <p class="time-current" id="time-current">hh:mm</p>
               </div>
             </div>
           </div>
@@ -95,13 +100,12 @@
               </div>
             </div>
           </div>
-        
+
           <div class="col-4">
             <div class="card-main">
-              <div class="card-body today-max-min">
-                <span class="today-max">max</span>
-                <span class="pipe">|</span> 
-                <span class="today-min">min</span>
+              <div class="card-body feels-like">
+                <span>feels like</span>
+                <span id="feels-like">°C</span>
               </div>
             </div>
           </div>
@@ -113,10 +117,19 @@
         <div class="col-4">
           <div class="card">
             <div class="card-body">
+              <h5>Maximum</h5>
+              <p class="today-max">°C</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
               <h5>Humidity</h5>
               <div class="pipe-group">
-               <span class="humidity" id="humidity">0</span>
-               <span class="humidity">%</span>
+                <span class="humidity" id="humidity">0</span>
+                <span class="humidity">%</span>
               </div>
             </div>
           </div>
@@ -130,133 +143,127 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <br />
+         <div class="row">
         <div class="col-4">
           <div class="card">
             <div class="card-body">
-              <h5>High Tide</h5>
-              <p class="time" id="high-tide">am</p>
+              <h5>Minimum</h5>
+              <p class="today-min">°C</p>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h5>Wind</h5>
+            <div class="pipe-group">
+              <span class="wind" id="wind-direction"></span>
+              <span class="pipe">|</span>
+              <span class="wind" id="wind-speed">0</span>
+              <span class="wind"> km/h</span>
             </div>
           </div>
         </div>
       </div>
 
-      <br />
-      <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h5>Wind</h5>
-              <div class="pipe-group">
-                <span class="wind" id="wind-direction"></span>
-                <span class="pipe">|</span> 
-                <span class="wind" id="wind-speed">0</span>
-                <span class="wind"> km/h</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h5>Sunset</h5>
-              <p class="time" id="sunset">pm</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h5>Low Tide</h5>
-              <p class="time" id="low-tide">pm</p>
-            </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h5>Sunset</h5>
+            <p class="time" id="sunset">pm</p>
           </div>
         </div>
       </div>
-
-      <br />
-      <hr/>
-      <br />
-      <div class="row">
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h6>Fri</h6>
-              <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span> 
-              <span class="temp-min">5°C</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h6>Sat</h6>
-              <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span> 
-              <span class="temp-min">5°C</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h6>Sun</h6>
-              <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span> 
-              <span class="temp-min">5°C</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h6>Mon</h6>
-              <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span> 
-              <span class="temp-min">5°C</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h6>Tue</h6>
-              <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span> 
-              <span class="temp-min">5°C</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h6>Wed</h6>
-              <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span> 
-              <span class="temp-min">5°C</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <footer><a href ="https://github.com/Katarina-411/weather-app.git">Open-source code</a> <span> by Katarina Farkas</span></footer>
-
     </div>
-    		<script src="src/index.js"></script>
+
+    <br />
+    <hr />
+    <br />
+    <div class="row">
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <h6>Fri</h6>
+            <div class="pipe-group">
+              <span class="temp-max">20°C</span>
+              <span class="pipe-small">|</span>
+              <span class="temp-min">5°C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <h6>Sat</h6>
+            <div class="pipe-group">
+              <span class="temp-max">20°C</span>
+              <span class="pipe-small">|</span>
+              <span class="temp-min">5°C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <h6>Sun</h6>
+            <div class="pipe-group">
+              <span class="temp-max">20°C</span>
+              <span class="pipe-small">|</span>
+              <span class="temp-min">5°C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <h6>Mon</h6>
+            <div class="pipe-group">
+              <span class="temp-max">20°C</span>
+              <span class="pipe-small">|</span>
+              <span class="temp-min">5°C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <h6>Tue</h6>
+            <div class="pipe-group">
+              <span class="temp-max">20°C</span>
+              <span class="pipe-small">|</span>
+              <span class="temp-min">5°C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <h6>Wed</h6>
+            <div class="pipe-group">
+              <span class="temp-max">20°C</span>
+              <span class="pipe-small">|</span>
+              <span class="temp-min">5°C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <a href="https://github.com/Katarina-411/weather-app.git"
+          >Open-source code</a
+        >
+        <span> by Katarina Farkas</span>
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
-
