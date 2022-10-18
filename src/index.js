@@ -37,6 +37,7 @@ function showSearch(response) {
     let w = parseInt(deg / 45);
     return `${directions[w]}`;
   }
+  celsiusTemperature = response.data.main.temp;
 }
 function locationSearch(event) {
   event.preventDefault();
@@ -88,6 +89,7 @@ function showGeoSearch(response) {
     let w = parseInt(deg / 45);
     return `${directions[w]}`;
   }
+  celsiusTemperature = response.data.main.temp;
 }
 
 function geoLocation(position) {
@@ -102,6 +104,26 @@ function currentLocation(event) {
 }
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", currentLocation);
+
+function displayFarenheit(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#current-temp");
+  let farenheit = (celsiusTemperature * 9) / 5 + 32;
+  currentTemp.innerHTML = Math.round(farenheit);
+}
+function displayCelsius(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#current-temp");
+  currentTemp.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", displayFarenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
 
 let now = new Date();
 let days = [
@@ -144,10 +166,15 @@ function formatDate() {
   return `${day}, ${date}  ${month}`;
 }
 function formatTime() {
+  if (hour === 12) {
+    return `${hour}:${minutes} pm`;
+  }
   if (hour >= 13) {
     hourClock = `${hour - 12}`;
     return `${hourClock}:${minutes} pm`;
-  } else return `${hour}:${minutes} am`;
+  } else {
+    return `${hour}:${minutes} am`;
+  }
 }
 let dateToday = document.querySelector("#date-today");
 dateToday.innerHTML = formatDate();
