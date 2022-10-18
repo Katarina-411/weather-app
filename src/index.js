@@ -37,6 +37,11 @@ function showSearch(response) {
     let w = parseInt(deg / 45);
     return `${directions[w]}`;
   }
+  let sunrise = document.querySelector("#sunrise");
+  sunrise.innerHTML = sunTime(response.data.sys.sunrise * 1000);
+  let sunset = document.querySelector("#sunset");
+  sunset.innerHTML = sunTime(response.data.sys.sunset * 1000);
+
   celsiusTemperature = response.data.main.temp;
 }
 function locationSearch(event) {
@@ -89,6 +94,11 @@ function showGeoSearch(response) {
     let w = parseInt(deg / 45);
     return `${directions[w]}`;
   }
+  let sunrise = document.querySelector("#sunrise");
+  sunrise.innerHTML = sunTime(response.data.sys.sunrise * 1000);
+  let sunset = document.querySelector("#sunset");
+  sunset.innerHTML = sunTime(response.data.sys.sunset * 1000);
+
   celsiusTemperature = response.data.main.temp;
 }
 
@@ -180,3 +190,21 @@ let dateToday = document.querySelector("#date-today");
 dateToday.innerHTML = formatDate();
 let timeCurrent = document.querySelector("#time-current");
 timeCurrent.innerHTML = formatTime();
+
+function sunTime(timestamp) {
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hour === 12) {
+    return `${hour}:${minutes} pm`;
+  }
+  if (hour >= 13) {
+    hourClock = `${hour - 12}`;
+    return `${hourClock}:${minutes} pm`;
+  } else {
+    return `${hour}:${minutes} am`;
+  }
+}
