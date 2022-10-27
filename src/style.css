@@ -16,6 +16,7 @@ h5 {
 }
 h6 {
   font-size: 16px;
+  font-weight: 600;
   text-align: center;
 }
 p {
@@ -37,21 +38,26 @@ footer,
 footer a {
   color: #076470;
   font-weight: 700;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 hr {
-  color: #d1dcdd;
+  color: #8f8787;
 }
 img {
   display: block;
   margin: 0 auto;
 }
-
 .container {
   max-width: 900px;
   margin: 50px auto;
   padding: 50px;
-  background-image: url(https://wallpaperaccess.com/full/655132.jpg);
+  background: linear-gradient(
+    to bottom,
+    #076470 0%,
+    #d8d1d1 30%,
+    #dab694 64%,
+    #8f8787 100%
+  );
   border-radius: 20px;
 }
 .card-main {
@@ -60,12 +66,18 @@ img {
 }
 .card {
   padding: 5px;
-  background: #f1f1f193;
+  background: #f1f1f180;
   border: none;
   border-radius: 15px;
 }
 .btn-secondary {
   background-color: #076470;
+}
+.btn {
+  border: none;
+}
+.btn:hover {
+  color: #8f8787;
 }
 .weather-today {
   display: flex;
@@ -112,23 +124,22 @@ img {
   font-size: 22px;
   text-align: center;
 }
-.today-max-min {
-  position: relative;
-  text-align: center;
-}
 .today-max {
   font-size: 22px;
   font-weight: 600;
   text-align: center;
 }
-
+.today-max-min {
+  position: relative;
+  text-align: center;
+}
 .pipe {
   color: #076470;
   font-size: 22px;
 }
 .pipe-small {
   color: #076470;
-  font-size: 18px;
+  font-size: 16px;
 }
 .pipe-group,
 .temp-group {

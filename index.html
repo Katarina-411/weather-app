@@ -23,7 +23,7 @@
     <title>What is the weather</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="background">
       <div class="row">
         <div class="col">
           <form class="d-flex" role="search" id="search-location">
@@ -77,7 +77,8 @@
             <div class="card-body temp-group">
               <span class="current-temp" id="current-temp">0</span>
               <span class="degrees">
-                <a href="#" id="celsius-link">°C </a> |
+                <a href="#" id="celsius-link">°C </a>
+                <span class="pipe">|</span>
                 <a href="#" id="farenheit-link">°F </a>
               </span>
             </div>
