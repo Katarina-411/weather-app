@@ -106,6 +106,8 @@ function showGeoSearch(response) {
   sunset.innerHTML = sunTime(response.data.sys.sunset * 1000);
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function geoLocation(position) {
