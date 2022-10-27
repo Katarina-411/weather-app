@@ -30,7 +30,7 @@
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search a location"
+              placeholder="Enter a city"
               aria-label="Search"
               id="search-location-input"
               autocomplete="off"
@@ -146,7 +146,7 @@
       </div>
 
       <br />
-         <div class="row">
+      <div class="row">
         <div class="col-4">
           <div class="card">
             <div class="card-body">
@@ -156,107 +156,34 @@
           </div>
         </div>
 
-      <div class="col-4">
-        <div class="card">
-          <div class="card-body">
-            <h5>Wind</h5>
-            <div class="pipe-group">
-              <span class="wind" id="wind-direction"></span>
-              <span class="pipe">|</span>
-              <span class="wind" id="wind-speed">0</span>
-              <span class="wind"> km/h</span>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h5>Wind</h5>
+              <div class="pipe-group">
+                <span class="wind" id="wind-direction"></span>
+                <span class="pipe">|</span>
+                <span class="wind" id="wind-speed">0</span>
+                <span class="wind"> m/s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h5>Sunset</h5>
+              <p class="time" id="sunset">pm</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-4">
-        <div class="card">
-          <div class="card-body">
-            <h5>Sunset</h5>
-            <p class="time" id="sunset">pm</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <br />
-    <hr />
-    <br />
-    <div class="row">
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body">
-            <h6>Fri</h6>
-            <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span>
-              <span class="temp-min">5°C</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body">
-            <h6>Sat</h6>
-            <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span>
-              <span class="temp-min">5°C</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body">
-            <h6>Sun</h6>
-            <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span>
-              <span class="temp-min">5°C</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body">
-            <h6>Mon</h6>
-            <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span>
-              <span class="temp-min">5°C</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body">
-            <h6>Tue</h6>
-            <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span>
-              <span class="temp-min">5°C</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body">
-            <h6>Wed</h6>
-            <div class="pipe-group">
-              <span class="temp-max">20°C</span>
-              <span class="pipe-small">|</span>
-              <span class="temp-min">5°C</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <br />
+      <hr />
+      <br />
+      <div class="forecast" id="forecast"></div>
       <footer>
         <a href="https://github.com/Katarina-411/weather-app.git"
           >Open-source code</a
