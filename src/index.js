@@ -71,10 +71,7 @@ function showGeoSearch(response) {
   conditionToday.innerHTML = response.data.weather[0].main;
   let feelsLike = document.querySelector("#feels-like");
   feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)}°C`;
-  let todayMax = document.querySelector(".today-max");
-  todayMax.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
-  let todayMin = document.querySelector(".today-min");
-  todayMin.innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
+
   let h2 = document.querySelector("h2");
   h2.innerHTML = response.data.sys.country;
   let conditionIcon = document.querySelector("#condition-icon");
@@ -227,11 +224,19 @@ function formatForecast(timestamp) {
 
 function displayForecast(response) {
   let dailyForecast = response.data.daily;
+  console.log(dailyForecast);
+  let todayMax = document.querySelector(".today-max");
+  todayMax.innerHTML = `${Math.round(dailyForecast[0].temp.max)}°C`;
+  let todayMin = document.querySelector(".today-min");
+  todayMin.innerHTML = `${Math.round(dailyForecast[0].temp.min)}°C`;
   let forecast = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
   dailyForecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index === 0) {
+      return null;
+    }
+    if (index < 7) {
       forecastHTML =
         forecastHTML +
         `<div class="col-2">
