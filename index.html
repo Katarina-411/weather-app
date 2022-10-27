@@ -103,9 +103,10 @@
 
           <div class="col-4">
             <div class="card-main">
-              <div class="card-body feels-like">
-                <span>feels like</span>
-                <span id="feels-like">°C</span>
+              <div class="card-body today-max-min">
+                <span class="today-max" id="today-max">max</span>
+                <span class="pipe">|</span>
+                <span class="today-min" id="today-min">min</span>
               </div>
             </div>
           </div>
@@ -114,16 +115,7 @@
 
       <br />
       <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h5>Maximum</h5>
-              <p class="today-max">°C</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4">
+        <div class="col-3">
           <div class="card">
             <div class="card-body">
               <h5>Humidity</h5>
@@ -135,28 +127,7 @@
           </div>
         </div>
 
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h5>Sunrise</h5>
-              <p class="time" id="sunrise">am</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <br />
-      <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h5>Minimum</h5>
-              <p class="today-min">°C</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4">
+        <div class="col-3">
           <div class="card">
             <div class="card-body">
               <h5>Wind</h5>
@@ -164,13 +135,22 @@
                 <span class="wind" id="wind-direction"></span>
                 <span class="pipe">|</span>
                 <span class="wind" id="wind-speed">0</span>
-                <span class="wind"> m/s</span>
+                <span class="wind"> km/h</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <h5>Sunrise</h5>
+              <p class="time" id="sunrise">am</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
           <div class="card">
             <div class="card-body">
               <h5>Sunset</h5>

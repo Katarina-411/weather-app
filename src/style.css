@@ -35,7 +35,7 @@ footer,
   padding-top: 20px;
 }
 footer a {
-  color: #2b7c81;
+  color: #076470;
   font-weight: 700;
   padding-top: 40px;
 }
@@ -65,7 +65,7 @@ img {
   border-radius: 15px;
 }
 .btn-secondary {
-  background-color: #2b7c81;
+  background-color: #076470;
 }
 .weather-today {
   display: flex;
@@ -102,11 +102,9 @@ img {
 }
 #celsius-link:hover,
 #farenheit-link:hover {
-  color: #2b7c81;
+  color: #076470;
 }
 .condition-today,
-.feels-like,
-.today-max,
 .today-min,
 .humidity,
 .wind,
@@ -114,12 +112,22 @@ img {
   font-size: 22px;
   text-align: center;
 }
+.today-max-min {
+  position: relative;
+  text-align: center;
+}
+.today-max {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
 .pipe {
-  color: #2b7c81;
+  color: #076470;
   font-size: 22px;
 }
 .pipe-small {
-  color: #2b7c81;
+  color: #076470;
   font-size: 18px;
 }
 .pipe-group,
