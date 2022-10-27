@@ -9,15 +9,13 @@ h1 {
 h2 {
   font-size: 26px;
 }
-
 h5 {
   font-size: 18px;
   font-weight: 600;
   text-align: center;
 }
-
 h6 {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 p {
@@ -41,6 +39,10 @@ footer a {
 }
 hr {
   color: #d1dcdd;
+}
+img {
+  display: block;
+  margin: 0 auto;
 }
 
 .container {
@@ -81,12 +83,10 @@ hr {
   margin: 0 auto;
   padding: 10px 5px;
 }
-
 .date-today,
 .time-current {
   font-size: 22px;
 }
-
 .current-temp {
   font-size: 80px;
   font-weight: 800;
@@ -118,9 +118,8 @@ hr {
 }
 .pipe-small {
   color: #2b7c81;
-  font-size: 16px;
+  font-size: 18px;
 }
-
 .pipe-group,
 .temp-group {
   position: static;
